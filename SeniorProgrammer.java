@@ -10,7 +10,7 @@
 public class SeniorProgrammer extends Programmer{
     public void coding(String str){
         if(this.getEnergy()>= 30){
-            System.out.println("I am coding about"+str);
+            System.out.println("I'm coding about "+str);
             this.setEnergy(this.getEnergy()-5);
             this.setHappiness(this.getHappiness()-5);
         }

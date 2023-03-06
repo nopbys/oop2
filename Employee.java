@@ -5,7 +5,7 @@
  */
 public class Employee  {
     //attriubte
-    private String nationality = "Thai";
+    private static String nationality = "Thai";
     private String name;
     private Wallet wallet;
     private int energy;
@@ -31,8 +31,8 @@ public class Employee  {
     public void setEnergy(int energy){
         this.energy = energy;
     }
-    public void setNationality(String nationality){
-        this.nationality = nationality;
+    public static void setNationality(String nationality){
+        Employee.nationality = nationality;
     }
     public String getName(){
         return name;
@@ -40,7 +40,7 @@ public class Employee  {
     public Wallet getWallet(){
         return wallet;
     }
-    public String getNationality(){
+    public static String getNationality(){
         return nationality;
     }
     public int getEnergy(){
@@ -58,7 +58,7 @@ public class Employee  {
         }
     }
     public String toString(){
-        return ("My name is "+this.name+"\nI have "+ this.energy+" left.\n have a balance of "+this.wallet.getBalance()+"baht.");
+        return ("My name is "+this.name+".\n I have "+ this.energy+" energy left.\nI have a balance of "+this.wallet.getBalance()+" baht.");
     }
     
 }
